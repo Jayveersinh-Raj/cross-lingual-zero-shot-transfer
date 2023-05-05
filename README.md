@@ -40,3 +40,16 @@ We merged all the classes to one, since all the classes belong to one super clas
 <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/373541/cuda.svg" alt="seaborn" width="50" height="50"/> </a>
 <a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/69463767/235667402-0584035a-8ce6-4d6b-ae66-66c8ff6c084c.png" alt="seaborn" width="80" height="50"/> </a>
 <a href="https://onnxruntime.ai/docs/" target="_blank" rel="noreferrer"> <img src="https://user-images.githubusercontent.com/69463767/236397772-a168be52-a8ce-46ce-94fd-d7f696be34e5.gif" alt="seaborn" width="50" height="50"/>
+
+# Key Results
+- Non-toxic sentences
+  - 100% accuracy - our model generalizes well
+- Toxic sentences
+  - 50% → they were not toxic enough, but were subjective to the human annotator.
+  - Proof of claim: GPT4 translated them, they weren’t severe, but refused to generate toxic sentences
+- Conclusion: GPT4 after generating said they were toxic, which is contradictory to itself, hence, our model is better in detecting abuse/toxicity/severity.
+
+# Custom vector space aligner 
+- Requirements
+  - Single GPU
+- Source : [LINK](https://www.arxiv-vanity.com/papers/2103.09635/)
