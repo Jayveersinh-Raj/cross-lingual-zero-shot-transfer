@@ -127,7 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-onnx-model
+model_xlm.onxx
 tensorRT_engine
 xlm-roberta_model_save
 virenv
