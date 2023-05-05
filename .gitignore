@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+onnx-model
+tensorRT_engine
+xlm-roberta_model_save
+virenv
