@@ -4,9 +4,10 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 @st.cache_resource
 # Function to load the saved model
-def load_model(model_path):
+def load_model():
   tokenizer = AutoTokenizer.from_pretrained("Jayveersinh-Raj/PolyGuard")
   model = AutoModelForSequenceClassification.from_pretrained("Jayveersinh-Raj/PolyGuard")
+  return tokenizer, model
 
 # Function to classify the text as toxic or not
 def classify_toxicity(text, tokenizer, model):
@@ -19,10 +20,9 @@ def classify_toxicity(text, tokenizer, model):
         return "Toxic"
     else:
         return "Not toxic"
-
-# Load your trained model (replace 'your_model_path' with the path to your saved model)
-MODEL_PATH = "xlm-roberta_model_save"
-tokenizer, model = load_model(MODEL_PATH)
+      
+# loading model, tokenizer
+tokenizer, model = load_model()
 
 # Streamlit app
 st.title("Toxicity Analysis / Abuse detection")
