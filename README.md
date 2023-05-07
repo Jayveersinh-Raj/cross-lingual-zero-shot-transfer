@@ -49,6 +49,35 @@ We merged all the classes to one, since all the classes belong to one super clas
   - Proof of claim: GPT4 translated them, they weren’t severe, but refused to generate toxic sentences
 - Conclusion: GPT4 after generating said they were toxic, which is contradictory to itself, hence, our model is better in detecting abuse/toxicity/severity.
 
+# Importing from Huggingface
+    
+    from transformers import AutoTokenizer, AutoModelForSequenceClassification
+    
+    tokenizer = AutoTokenizer.from_pretrained("Jayveersinh-Raj/PolyGuard")
+    model = AutoModelForSequenceClassification.from_pretrained("Jayveersinh-Raj/PolyGuard")
+    
+# Example usecase
+    from transformers import XLMRobertaForSequenceClassification, AutoTokenizer
+    import torch
+
+    model_name = "Jayveersinh-Raj/PolyGuard"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = XLMRobertaForSequenceClassification.from_pretrained(model_name)
+
+    text = "Jayveer is a great NLP engineer, and a noob in CV"
+    inputs = tokenizer.encode(text, return_tensors="pt", max_length=512, truncation=True)
+    outputs = model(inputs)[0]
+    probabilities = torch.softmax(outputs, dim=1)
+    predicted_class = torch.argmax(probabilities).item()
+    if predicted_class == 1:
+      print("Toxic")
+    else:
+      print("Not toxic")
+
+# NOTE
+## Make sure to have sentencepiece already installed, restart runtime after installation
+    pip install sentencepiece
+
 # Custom vector space aligner 
 - Requirements
   - Single GPU
