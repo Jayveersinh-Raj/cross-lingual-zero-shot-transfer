@@ -45,7 +45,7 @@ We merged all the classes to one, since all the classes belong to one super clas
 - Non-toxic sentences
   - 100% accuracy - our model generalizes well
 - Toxic sentences
-  - 50% → they were not toxic enough, but were subjective to the human annotator.
+  - 75% → they were not toxic enough, but were subjective to the human annotator.
   - Proof of claim: GPT4 translated them, they weren’t severe, but refused to generate toxic sentences
 - Conclusion: GPT4 after generating said they were toxic, which is contradictory to itself, hence, our model is better in detecting abuse/toxicity/severity.
 
