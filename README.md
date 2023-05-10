@@ -1,12 +1,15 @@
 # Cross Lingual Zero Shot Transfer
-Cross-lingual NLP: Developing NLP models that can effectively process and translate multiple languages, especially low-resource languages, to help bridge language barriers and make information more accessible.
+Cross-lingual NLP: Using vector space alignment to get cross lingual performance is zero shot cross lingual mechanism. Here we use it to train on English dataset, and get effective performance over 100 or more languages. Checkout this clickable [🤗](https://huggingface.co/Jayveersinh-Raj/PolyGuard) for the languages it supports. 
 
-# Authors:
+# Repository admins (This repository is mainly the work of the following, but open source contributors are welcome):
 Jayveersinh Raj
 
 Makar Shevchenko
 
 Nikolay Pavlenko
+
+# Our pledge
+We attempt to make internet a better, safer, and healthier place creating this. Moreover, our work also detects `threatning` as `toxic`, and hence could be used by LLMs as well as Robots to refrain from taking toxic/threatning actions, making them safer to use, and interactions healthier. 
 
 # Brief Description
 This is a project for `Abuse reporting` trained on `toxic comments by Jigsaw Google dataset with 150k+ english comments`. The project aims to accomplish the arbitary zero shot transfer for abuse detection in arbitarary language while being trained on English dataset. It attempts to achieve this by using the vector space alignment that is the core idea behind embedding models like XLM-Roberta, MUSE etc. Different embeddings are tested with the dataset to check the best performing embedder. Our project/model can be used by any platform or software engineer/enthusiast who has to deal with multiple languages to directly flag the toxic behaviour, or identify a valid report by users for a toxic behaviour. The use case for this can be application specific, but the idea is to make the model work with arbitary language by training on a singular language data available.
@@ -78,7 +81,8 @@ We merged all the classes to one, since all the classes belong to one super clas
 ## Make sure to have sentencepiece already installed, restart runtime after installation
     pip install sentencepiece
 
-# Custom vector space aligner 
-- Requirements
-  - Single GPU
-- Source : [LINK](https://www.arxiv-vanity.com/papers/2103.09635/)
+# Application of our model, and contribution
+ - An example of code of conduct that it assist to regulate using advanced NLP techniques. [Code of conduct](https://github.com/Jayveersinh-Raj/cross-lingual-zero-shot-transfer/blob/main/CODE_OF_CONDUCT.md)
+ - On a higher level our model can also be used as a decision making last layer for LLMs to decide on wheather the reponse if offensive, obscence, toxic or threatning. 
+ - It also would act as a ethical decision maker for Robots using LLMs for thought generations, it would help make AI, models, and Robots safer by providing a decision maker factor by blocking toxic as a harmful act, since our model also detects `threatning` as toxic. Hence, making AI safer, and ethical. 
+  
