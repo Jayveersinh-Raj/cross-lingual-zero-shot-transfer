@@ -1,3 +1,5 @@
+## An example of code of conduct which our contribution attempts to follow, and assist using Advanced Natural Language techniques. 
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
